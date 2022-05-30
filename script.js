@@ -11,7 +11,6 @@ let score = 0;
 let showMovements = document.getElementById('movimientos');
 let showScore = document.getElementById('aciertos');
 let allButtons = document.querySelectorAll('button');
-console.log(allButtons);
 
 // Generar números aleatorios en un array
 let numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
@@ -38,9 +37,8 @@ function showCard(id) {
         // Incrementar la cantidad de movimientos
         movements++;
         showMovements.innerHTML = `Movimientos: ${movements}`;
-
-        if(firstResult == secondResult) {
-            console.log("son iguales!")
+        if(firstResult === secondResult) {
+            showedCards = 0;
             score++;
             showScore.innerHTML = `Aciertos: ${score}`;
             if (score == 8) {
@@ -48,7 +46,7 @@ function showCard(id) {
                     allButtons.forEach(button =>{
                         button.innerHTML = "";
                         button.disabled = false;
-                    })
+                    });
                     movements = 0;
                     score = 0;
                     showMovements.innerHTML = "Movimientos: 0";
@@ -61,7 +59,8 @@ function showCard(id) {
                 card2.innerHTML = "";
                 card1.disabled = false;
                 card2.disabled = false;
-            }, 700);
+            }, 500);
         }
+        
     }
 }
