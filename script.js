@@ -51,7 +51,7 @@ function showCard(id) {
                     score = 0;
                     showMovements.innerHTML = "Movimientos: 0";
                     showScore.innerHTML = "Aciertos: 0";
-                }, 700);
+                }, 900);
             }
         } else {
             setTimeout(function(){
