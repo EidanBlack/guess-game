@@ -33,7 +33,6 @@ function showCard(id) {
         secondResult = numbers[id];
         card2.innerHTML = numbers[id];
         card2.disabled = true;
-        showedCards = 0;
         // Incrementar la cantidad de movimientos
         movements++;
         showMovements.innerHTML = `Movimientos: ${movements}`;
@@ -59,6 +58,7 @@ function showCard(id) {
                 card2.innerHTML = "";
                 card1.disabled = false;
                 card2.disabled = false;
+                showedCards = 0;
             }, 500);
         }
         
